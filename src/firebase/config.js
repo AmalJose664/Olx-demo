@@ -6,14 +6,15 @@ import { getAuth,signInWithEmailAndPassword,
     createUserWithEmailAndPassword,updateProfile, 
     onAuthStateChanged,signOut
 } from 'firebase/auth';
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDJDqwVscXAb1Jvx4uR-dwHZf0IsQW75ZI",
-    authDomain: "new-firebase-58f8d.firebaseapp.com",
-    projectId: "new-firebase-58f8d",
-    storageBucket: "new-firebase-58f8d.firebasestorage.app",
-    messagingSenderId: "642115047365",
-    appId: "1:642115047365:web:67fe05335cc8e9cac885ac",
-    measurementId: "G-C4GK4V1VTE"
+	apiKey: process.env.REACT_APP_APIKEY,
+	authDomain: process.env.REACT_APP_AUTHDOMAIN,
+	projectId: process.env.REACT_APP_PROJECTID,
+	storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+	messagingSenderId: process.env.REACT_APP_MESSAGEING_SENDER_ID,
+	appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MESUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig)
